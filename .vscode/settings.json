@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "saurabh_c_.sln"
+    "dotnet.defaultSolution": "Zombie-game-.sln"
 }
