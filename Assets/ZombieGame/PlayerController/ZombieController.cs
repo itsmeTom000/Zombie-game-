@@ -12,10 +12,12 @@ public class ZombieController : MonoBehaviour
     [SerializeField] private BossZombieScript bossZombiePrefeb;
     [SerializeField] private Transform playerPosition;
     Vector3 max = new(30, 0, 30);
-    public int bulletDamage = 20;
+
+    [Range(0, 100)]
+    public int bulletDamage;
     private int level;
     #endregion
-    
+
     #region Public_Variable
     public int deadzombieCount;
     #endregion
@@ -48,7 +50,7 @@ public class ZombieController : MonoBehaviour
     {
         for (int i = 0; i < LevelGenerator.Instance.zombieLevelData.zombieCount; i++)
         {
-            Vector3 offset = new (
+            Vector3 offset = new(
                 Random.Range(-max.x, max.x),
                 1,
                 Random.Range(-max.z, max.z)
@@ -65,7 +67,7 @@ public class ZombieController : MonoBehaviour
     {
         for (int i = 0; i < LevelGenerator.Instance.bossData.bossCount; i++)
         {
-            Vector3 offset = new (
+            Vector3 offset = new(
                Random.Range(-max.x, max.x),
                1,
                Random.Range(-max.z, max.z)

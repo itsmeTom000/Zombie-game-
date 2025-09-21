@@ -41,6 +41,7 @@ public class BossZombieScript : MonoBehaviour
         }
         else if (other.CompareTag("Wall"))
         {
+            SoundManager.Instance.PlayDamageSound();
             HandleWallCollision();
         }
     }

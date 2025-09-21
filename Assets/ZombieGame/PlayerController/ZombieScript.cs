@@ -42,7 +42,7 @@ public class ZombieScript : MonoBehaviour
         }
         if (other.CompareTag("Wall"))
         {
-            Debug.Log("Defeat");
+            SoundManager.Instance.PlayDamageSound();
             HandleWallCollision();
         }
     }
